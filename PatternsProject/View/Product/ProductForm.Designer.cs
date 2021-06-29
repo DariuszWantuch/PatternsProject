@@ -1,7 +1,7 @@
 ﻿
-namespace PatternsProject.View.Contractor
+namespace PatternsProject.View.Product
 {
-    partial class ContractorForm
+    partial class ProductForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@ namespace PatternsProject.View.Contractor
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractorForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.SuspendLayout();
             // 
-            // ContractorForm
+            // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 561);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ContractorForm.IconOptions.SvgImage")));
-            this.Name = "ContractorForm";
-            this.Text = "Kontrahent";
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ProductForm.IconOptions.SvgImage")));
+            this.Name = "ProductForm";
+            this.Text = "Produkt";
             this.ResumeLayout(false);
 
         }

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PatternsProject.Mapping;
 
 namespace PatternsProject.Service
 {
@@ -50,7 +51,7 @@ namespace PatternsProject.Service
         private static List<Type> GetMappingTypes()
         {
             var m = new List<Type>();
-           
+            m.Add(typeof(ProductMap));
             return m;
         }
 

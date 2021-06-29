@@ -44,74 +44,84 @@ namespace PatternsProject
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.deleteButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
+            this.editButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControlInvoice = new DevExpress.XtraGrid.GridControl();
+            this.gridViewInvoice = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.editButtonContractor = new DevExpress.XtraEditors.SimpleButton();
+            this.deleteButtonContractor = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonContractor = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridControlInvoice = new DevExpress.XtraGrid.GridControl();
-            this.gridViewInvoice = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.addButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.editButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.deleteButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.addButtonContractor = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.deleteButtonContractor = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.editButtonContractor = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridControlProduct = new DevExpress.XtraGrid.GridControl();
+            this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.addButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.deleteButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.editButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.customersNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.navigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.navigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar
@@ -227,6 +237,7 @@ namespace PatternsProject
             // 
             // employeesNavigationPage
             // 
+            this.employeesNavigationPage.Caption = "employeesNavigationPage";
             this.employeesNavigationPage.Controls.Add(this.layoutControl1);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
             this.employeesNavigationPage.Size = new System.Drawing.Size(692, 451);
@@ -246,6 +257,48 @@ namespace PatternsProject
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // deleteButtonInvoice
+            // 
+            this.deleteButtonInvoice.Location = new System.Drawing.Point(465, 417);
+            this.deleteButtonInvoice.Name = "deleteButtonInvoice";
+            this.deleteButtonInvoice.Size = new System.Drawing.Size(215, 22);
+            this.deleteButtonInvoice.StyleController = this.layoutControl1;
+            this.deleteButtonInvoice.TabIndex = 7;
+            this.deleteButtonInvoice.Text = "Usuń fakture";
+            // 
+            // editButtonInvoice
+            // 
+            this.editButtonInvoice.Location = new System.Drawing.Point(238, 417);
+            this.editButtonInvoice.Name = "editButtonInvoice";
+            this.editButtonInvoice.Size = new System.Drawing.Size(223, 22);
+            this.editButtonInvoice.StyleController = this.layoutControl1;
+            this.editButtonInvoice.TabIndex = 6;
+            this.editButtonInvoice.Text = "Edytuj fakture";
+            // 
+            // addButtonInvoice
+            // 
+            this.addButtonInvoice.Location = new System.Drawing.Point(12, 417);
+            this.addButtonInvoice.Name = "addButtonInvoice";
+            this.addButtonInvoice.Size = new System.Drawing.Size(222, 22);
+            this.addButtonInvoice.StyleController = this.layoutControl1;
+            this.addButtonInvoice.TabIndex = 5;
+            this.addButtonInvoice.Text = "Dodaj fakture";
+            // 
+            // gridControlInvoice
+            // 
+            this.gridControlInvoice.Location = new System.Drawing.Point(12, 12);
+            this.gridControlInvoice.MainView = this.gridViewInvoice;
+            this.gridControlInvoice.Name = "gridControlInvoice";
+            this.gridControlInvoice.Size = new System.Drawing.Size(668, 401);
+            this.gridControlInvoice.TabIndex = 4;
+            this.gridControlInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewInvoice});
+            // 
+            // gridViewInvoice
+            // 
+            this.gridViewInvoice.GridControl = this.gridControlInvoice;
+            this.gridViewInvoice.Name = "gridViewInvoice";
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -259,6 +312,42 @@ namespace PatternsProject
             this.Root.Size = new System.Drawing.Size(692, 451);
             this.Root.TextVisible = false;
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.gridControlInvoice;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(672, 405);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.addButtonInvoice;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(226, 26);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.editButtonInvoice;
+            this.layoutControlItem6.Location = new System.Drawing.Point(226, 405);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(227, 26);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.deleteButtonInvoice;
+            this.layoutControlItem7.Location = new System.Drawing.Point(453, 405);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(219, 26);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
             // customersNavigationPage
             // 
             this.customersNavigationPage.Controls.Add(this.layoutControl2);
@@ -267,7 +356,10 @@ namespace PatternsProject
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.labelControl2);
+            this.layoutControl2.Controls.Add(this.editButtonProduct);
+            this.layoutControl2.Controls.Add(this.deleteButtonProduct);
+            this.layoutControl2.Controls.Add(this.addButtonProduct);
+            this.layoutControl2.Controls.Add(this.gridControlProduct);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
@@ -276,46 +368,21 @@ namespace PatternsProject
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 12);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(43, 13);
-            this.labelControl2.StyleController = this.layoutControl2;
-            this.labelControl2.TabIndex = 4;
-            this.labelControl2.Text = "Produkty";
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem2});
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem13});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(692, 451);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.labelControl2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(672, 17);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 17);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(672, 414);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // navigationPage1
             // 
-            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.layoutControl3);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(692, 451);
@@ -334,6 +401,49 @@ namespace PatternsProject
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
+            // editButtonContractor
+            // 
+            this.editButtonContractor.Location = new System.Drawing.Point(241, 417);
+            this.editButtonContractor.Name = "editButtonContractor";
+            this.editButtonContractor.Size = new System.Drawing.Size(219, 22);
+            this.editButtonContractor.StyleController = this.layoutControl3;
+            this.editButtonContractor.TabIndex = 7;
+            this.editButtonContractor.Text = "Edytuj kontrahenta";
+            // 
+            // deleteButtonContractor
+            // 
+            this.deleteButtonContractor.Location = new System.Drawing.Point(464, 417);
+            this.deleteButtonContractor.Name = "deleteButtonContractor";
+            this.deleteButtonContractor.Size = new System.Drawing.Size(216, 22);
+            this.deleteButtonContractor.StyleController = this.layoutControl3;
+            this.deleteButtonContractor.TabIndex = 6;
+            this.deleteButtonContractor.Text = "Usuń kontrahenta";
+            // 
+            // addButtonContractor
+            // 
+            this.addButtonContractor.Location = new System.Drawing.Point(12, 417);
+            this.addButtonContractor.Name = "addButtonContractor";
+            this.addButtonContractor.Size = new System.Drawing.Size(225, 22);
+            this.addButtonContractor.StyleController = this.layoutControl3;
+            this.addButtonContractor.TabIndex = 5;
+            this.addButtonContractor.Text = "Dodaj kontrahenta";
+            this.addButtonContractor.Click += new System.EventHandler(this.addButtonContractor_Click);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(12, 12);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(668, 401);
+            this.gridControl1.TabIndex = 4;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -346,6 +456,42 @@ namespace PatternsProject
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(692, 451);
             this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(672, 405);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.addButtonContractor;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(229, 26);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.deleteButtonContractor;
+            this.layoutControlItem9.Location = new System.Drawing.Point(452, 405);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(220, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.editButtonContractor;
+            this.layoutControlItem10.Location = new System.Drawing.Point(229, 405);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(223, 26);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // navigationPage2
             // 
@@ -402,162 +548,84 @@ namespace PatternsProject
             this.emptySpaceItem4.Size = new System.Drawing.Size(672, 414);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // gridControlInvoice
+            // gridControlProduct
             // 
-            this.gridControlInvoice.Location = new System.Drawing.Point(12, 12);
-            this.gridControlInvoice.MainView = this.gridViewInvoice;
-            this.gridControlInvoice.Name = "gridControlInvoice";
-            this.gridControlInvoice.Size = new System.Drawing.Size(668, 401);
-            this.gridControlInvoice.TabIndex = 4;
-            this.gridControlInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewInvoice});
+            this.gridControlProduct.Location = new System.Drawing.Point(12, 12);
+            this.gridControlProduct.MainView = this.gridViewProduct;
+            this.gridControlProduct.Name = "gridControlProduct";
+            this.gridControlProduct.Size = new System.Drawing.Size(668, 401);
+            this.gridControlProduct.TabIndex = 4;
+            this.gridControlProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewProduct});
             // 
-            // gridViewInvoice
+            // gridViewProduct
             // 
-            this.gridViewInvoice.GridControl = this.gridControlInvoice;
-            this.gridViewInvoice.Name = "gridViewInvoice";
+            this.gridViewProduct.GridControl = this.gridControlProduct;
+            this.gridViewProduct.Name = "gridViewProduct";
             // 
-            // layoutControlItem4
+            // layoutControlItem1
             // 
-            this.layoutControlItem4.Control = this.gridControlInvoice;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(672, 405);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
+            this.layoutControlItem1.Control = this.gridControlProduct;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(672, 405);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
-            // addButtonInvoice
+            // addButtonProduct
             // 
-            this.addButtonInvoice.Location = new System.Drawing.Point(12, 417);
-            this.addButtonInvoice.Name = "addButtonInvoice";
-            this.addButtonInvoice.Size = new System.Drawing.Size(222, 22);
-            this.addButtonInvoice.StyleController = this.layoutControl1;
-            this.addButtonInvoice.TabIndex = 5;
-            this.addButtonInvoice.Text = "Dodaj fakture";
+            this.addButtonProduct.Location = new System.Drawing.Point(12, 417);
+            this.addButtonProduct.Name = "addButtonProduct";
+            this.addButtonProduct.Size = new System.Drawing.Size(233, 22);
+            this.addButtonProduct.StyleController = this.layoutControl2;
+            this.addButtonProduct.TabIndex = 5;
+            this.addButtonProduct.Text = "Dodaj produkt";
+            this.addButtonProduct.Click += new System.EventHandler(this.addButtonProduct_Click);
             // 
-            // layoutControlItem5
+            // layoutControlItem11
             // 
-            this.layoutControlItem5.Control = this.addButtonInvoice;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 405);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(226, 26);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
+            this.layoutControlItem11.Control = this.addButtonProduct;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(237, 26);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
             // 
-            // editButtonInvoice
+            // deleteButtonProduct
             // 
-            this.editButtonInvoice.Location = new System.Drawing.Point(238, 417);
-            this.editButtonInvoice.Name = "editButtonInvoice";
-            this.editButtonInvoice.Size = new System.Drawing.Size(223, 22);
-            this.editButtonInvoice.StyleController = this.layoutControl1;
-            this.editButtonInvoice.TabIndex = 6;
-            this.editButtonInvoice.Text = "Edytuj fakture";
+            this.deleteButtonProduct.Location = new System.Drawing.Point(475, 417);
+            this.deleteButtonProduct.Name = "deleteButtonProduct";
+            this.deleteButtonProduct.Size = new System.Drawing.Size(205, 22);
+            this.deleteButtonProduct.StyleController = this.layoutControl2;
+            this.deleteButtonProduct.TabIndex = 6;
+            this.deleteButtonProduct.Text = "Usuń produkt";
             // 
-            // layoutControlItem6
+            // layoutControlItem12
             // 
-            this.layoutControlItem6.Control = this.editButtonInvoice;
-            this.layoutControlItem6.Location = new System.Drawing.Point(226, 405);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(227, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
+            this.layoutControlItem12.Control = this.deleteButtonProduct;
+            this.layoutControlItem12.Location = new System.Drawing.Point(463, 405);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(209, 26);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
             // 
-            // deleteButtonInvoice
+            // editButtonProduct
             // 
-            this.deleteButtonInvoice.Location = new System.Drawing.Point(465, 417);
-            this.deleteButtonInvoice.Name = "deleteButtonInvoice";
-            this.deleteButtonInvoice.Size = new System.Drawing.Size(215, 22);
-            this.deleteButtonInvoice.StyleController = this.layoutControl1;
-            this.deleteButtonInvoice.TabIndex = 7;
-            this.deleteButtonInvoice.Text = "Usuń fakture";
+            this.editButtonProduct.Location = new System.Drawing.Point(249, 417);
+            this.editButtonProduct.Name = "editButtonProduct";
+            this.editButtonProduct.Size = new System.Drawing.Size(222, 22);
+            this.editButtonProduct.StyleController = this.layoutControl2;
+            this.editButtonProduct.TabIndex = 7;
+            this.editButtonProduct.Text = "Edytuj produkt";
             // 
-            // layoutControlItem7
+            // layoutControlItem13
             // 
-            this.layoutControlItem7.Control = this.deleteButtonInvoice;
-            this.layoutControlItem7.Location = new System.Drawing.Point(453, 405);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(219, 26);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 12);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(668, 401);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(672, 405);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // addButtonContractor
-            // 
-            this.addButtonContractor.Location = new System.Drawing.Point(12, 417);
-            this.addButtonContractor.Name = "addButtonContractor";
-            this.addButtonContractor.Size = new System.Drawing.Size(225, 22);
-            this.addButtonContractor.StyleController = this.layoutControl3;
-            this.addButtonContractor.TabIndex = 5;
-            this.addButtonContractor.Text = "Dodaj kontrahenta";
-            this.addButtonContractor.Click += new System.EventHandler(this.addButtonContractor_Click);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.addButtonContractor;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 405);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(229, 26);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
-            // deleteButtonContractor
-            // 
-            this.deleteButtonContractor.Location = new System.Drawing.Point(464, 417);
-            this.deleteButtonContractor.Name = "deleteButtonContractor";
-            this.deleteButtonContractor.Size = new System.Drawing.Size(216, 22);
-            this.deleteButtonContractor.StyleController = this.layoutControl3;
-            this.deleteButtonContractor.TabIndex = 6;
-            this.deleteButtonContractor.Text = "Usuń kontrahenta";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.deleteButtonContractor;
-            this.layoutControlItem9.Location = new System.Drawing.Point(452, 405);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(220, 26);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
-            // editButtonContractor
-            // 
-            this.editButtonContractor.Location = new System.Drawing.Point(241, 417);
-            this.editButtonContractor.Name = "editButtonContractor";
-            this.editButtonContractor.Size = new System.Drawing.Size(219, 22);
-            this.editButtonContractor.StyleController = this.layoutControl3;
-            this.editButtonContractor.TabIndex = 7;
-            this.editButtonContractor.Text = "Edytuj kontrahenta";
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.editButtonContractor;
-            this.layoutControlItem10.Location = new System.Drawing.Point(229, 405);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(223, 26);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
+            this.layoutControlItem13.Control = this.editButtonProduct;
+            this.layoutControlItem13.Location = new System.Drawing.Point(237, 405);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(226, 26);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
             // 
             // PatternsProject
             // 
@@ -568,42 +636,46 @@ namespace PatternsProject
             this.ClientSize = new System.Drawing.Size(692, 561);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.tileBar);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MainForm.IconOptions.SvgImage")));
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("PatternsProject.IconOptions.SvgImage")));
             this.Name = "PatternsProject";
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
             this.navigationFrame.ResumeLayout(false);
             this.employeesNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.customersNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.navigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.navigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -624,10 +696,7 @@ namespace PatternsProject
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
@@ -653,5 +722,14 @@ namespace PatternsProject
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.SimpleButton editButtonProduct;
+        private DevExpress.XtraEditors.SimpleButton deleteButtonProduct;
+        private DevExpress.XtraEditors.SimpleButton addButtonProduct;
+        private DevExpress.XtraGrid.GridControl gridControlProduct;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewProduct;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
     }
 }

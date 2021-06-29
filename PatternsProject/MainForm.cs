@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using PatternsProject.Service;
 using PatternsProject.View.Contractor;
+using PatternsProject.View.Product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,17 @@ namespace PatternsProject
                 if(addContractorForm.ShowDialog() == DialogResult.OK)
                 {
                     
+                }
+            }
+        }
+
+        private void addButtonProduct_Click(object sender, EventArgs e)
+        {
+            using (ProductForm addProductForm = new ProductForm())
+            {
+                if (addProductForm.ShowDialog() == DialogResult.OK)
+                {
+
                 }
             }
         }
