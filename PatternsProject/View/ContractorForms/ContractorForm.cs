@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PatternsProject.View.Product
+namespace PatternsProject.View.ContractorForms
 {
-    public partial class ProductForm : DevExpress.XtraEditors.XtraForm
+    public partial class ContractorForm : DevExpress.XtraEditors.XtraForm
     {
-        public ProductForm()
+        public ContractorForm()
         {
             InitializeComponent();
             this.CenterToParent();

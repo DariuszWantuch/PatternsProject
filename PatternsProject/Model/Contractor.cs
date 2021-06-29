@@ -9,7 +9,7 @@ namespace PatternsProject.Model
     public class Contractor
     {
         public virtual int Id { get; set; }
-        public virtual long NIP { get; set; }
+        public virtual string NIP { get; set; }
         public virtual string Name { get; set; }
         public virtual string Email { get; set; }
        

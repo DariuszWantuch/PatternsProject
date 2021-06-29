@@ -1,5 +1,5 @@
 ﻿
-namespace PatternsProject.View.Contractor
+namespace PatternsProject.View.ContractorForms
 {
     partial class ContractorForm
     {

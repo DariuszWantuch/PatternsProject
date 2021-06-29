@@ -30,11 +30,12 @@ namespace PatternsProject
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternsProject));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.invoicesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -56,7 +57,21 @@ namespace PatternsProject
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.editButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.deleteButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControlProduct = new DevExpress.XtraGrid.GridControl();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCost = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.editButtonContractor = new DevExpress.XtraEditors.SimpleButton();
@@ -75,15 +90,6 @@ namespace PatternsProject
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.gridControlProduct = new DevExpress.XtraGrid.GridControl();
-            this.gridViewProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.addButtonProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.deleteButtonProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.editButtonProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -99,7 +105,14 @@ namespace PatternsProject
             this.customersNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.navigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
@@ -116,12 +129,6 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar
@@ -171,47 +178,47 @@ namespace PatternsProject
             // invoicesTileBarItem
             // 
             this.invoicesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement1.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-            tileItemElement1.Text = "Faktury";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.invoicesTileBarItem.Elements.Add(tileItemElement1);
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement5.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+            tileItemElement5.Text = "Faktury";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.invoicesTileBarItem.Elements.Add(tileItemElement5);
             this.invoicesTileBarItem.Id = 1;
             this.invoicesTileBarItem.Name = "invoicesTileBarItem";
             // 
             // productsTileBarItem
             // 
             this.productsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement2.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement2.Text = "Produkty";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.productsTileBarItem.Elements.Add(tileItemElement2);
+            tileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement6.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement6.Text = "Produkty";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.productsTileBarItem.Elements.Add(tileItemElement6);
             this.productsTileBarItem.Id = 2;
             this.productsTileBarItem.Name = "productsTileBarItem";
             // 
             // contractorsTileBarItem
             // 
             this.contractorsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement3.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-            tileItemElement3.Text = "Kontrahenci";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.contractorsTileBarItem.Elements.Add(tileItemElement3);
+            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement7.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+            tileItemElement7.Text = "Kontrahenci";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.contractorsTileBarItem.Elements.Add(tileItemElement7);
             this.contractorsTileBarItem.Id = 3;
             this.contractorsTileBarItem.Name = "contractorsTileBarItem";
             // 
             // sendsTileBarItem
             // 
             this.sendsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement4.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-            tileItemElement4.Text = "Wysyłka potwierdzeń";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.sendsTileBarItem.Elements.Add(tileItemElement4);
+            tileItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement8.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+            tileItemElement8.Text = "Wysyłka potwierdzeń";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.sendsTileBarItem.Elements.Add(tileItemElement8);
             this.sendsTileBarItem.Id = 4;
             this.sendsTileBarItem.Name = "sendsTileBarItem";
             // 
@@ -368,6 +375,87 @@ namespace PatternsProject
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // editButtonProduct
+            // 
+            this.editButtonProduct.Location = new System.Drawing.Point(249, 417);
+            this.editButtonProduct.Name = "editButtonProduct";
+            this.editButtonProduct.Size = new System.Drawing.Size(222, 22);
+            this.editButtonProduct.StyleController = this.layoutControl2;
+            this.editButtonProduct.TabIndex = 7;
+            this.editButtonProduct.Text = "Edytuj produkt";
+            this.editButtonProduct.Click += new System.EventHandler(this.editButtonProduct_Click);
+            // 
+            // deleteButtonProduct
+            // 
+            this.deleteButtonProduct.Location = new System.Drawing.Point(475, 417);
+            this.deleteButtonProduct.Name = "deleteButtonProduct";
+            this.deleteButtonProduct.Size = new System.Drawing.Size(205, 22);
+            this.deleteButtonProduct.StyleController = this.layoutControl2;
+            this.deleteButtonProduct.TabIndex = 6;
+            this.deleteButtonProduct.Text = "Usuń produkt";
+            this.deleteButtonProduct.Click += new System.EventHandler(this.deleteButtonProduct_Click);
+            // 
+            // addButtonProduct
+            // 
+            this.addButtonProduct.Location = new System.Drawing.Point(12, 417);
+            this.addButtonProduct.Name = "addButtonProduct";
+            this.addButtonProduct.Size = new System.Drawing.Size(233, 22);
+            this.addButtonProduct.StyleController = this.layoutControl2;
+            this.addButtonProduct.TabIndex = 5;
+            this.addButtonProduct.Text = "Dodaj produkt";
+            this.addButtonProduct.Click += new System.EventHandler(this.addButtonProduct_Click);
+            // 
+            // gridControlProduct
+            // 
+            this.gridControlProduct.DataSource = this.productBindingSource;
+            this.gridControlProduct.Location = new System.Drawing.Point(12, 12);
+            this.gridControlProduct.MainView = this.gridViewProduct;
+            this.gridControlProduct.Name = "gridControlProduct";
+            this.gridControlProduct.Size = new System.Drawing.Size(668, 401);
+            this.gridControlProduct.TabIndex = 4;
+            this.gridControlProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewProduct});
+            // 
+            // gridViewProduct
+            // 
+            this.gridViewProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colName,
+            this.colCost,
+            this.colEAN});
+            this.gridViewProduct.GridControl = this.gridControlProduct;
+            this.gridViewProduct.Name = "gridViewProduct";
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "Nazwa";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 1;
+            // 
+            // colCost
+            // 
+            this.colCost.Caption = "Koszt";
+            this.colCost.FieldName = "Cost";
+            this.colCost.Name = "colCost";
+            this.colCost.Visible = true;
+            this.colCost.VisibleIndex = 2;
+            // 
+            // colEAN
+            // 
+            this.colEAN.FieldName = "EAN";
+            this.colEAN.Name = "colEAN";
+            this.colEAN.Visible = true;
+            this.colEAN.VisibleIndex = 3;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -381,8 +469,45 @@ namespace PatternsProject
             this.layoutControlGroup1.Size = new System.Drawing.Size(692, 451);
             this.layoutControlGroup1.TextVisible = false;
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControlProduct;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(672, 405);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.addButtonProduct;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(237, 26);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.deleteButtonProduct;
+            this.layoutControlItem12.Location = new System.Drawing.Point(463, 405);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(209, 26);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.editButtonProduct;
+            this.layoutControlItem13.Location = new System.Drawing.Point(237, 405);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(226, 26);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
             // navigationPage1
             // 
+            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.layoutControl3);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(692, 451);
@@ -548,85 +673,6 @@ namespace PatternsProject
             this.emptySpaceItem4.Size = new System.Drawing.Size(672, 414);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // gridControlProduct
-            // 
-            this.gridControlProduct.Location = new System.Drawing.Point(12, 12);
-            this.gridControlProduct.MainView = this.gridViewProduct;
-            this.gridControlProduct.Name = "gridControlProduct";
-            this.gridControlProduct.Size = new System.Drawing.Size(668, 401);
-            this.gridControlProduct.TabIndex = 4;
-            this.gridControlProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewProduct});
-            // 
-            // gridViewProduct
-            // 
-            this.gridViewProduct.GridControl = this.gridControlProduct;
-            this.gridViewProduct.Name = "gridViewProduct";
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.gridControlProduct;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(672, 405);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // addButtonProduct
-            // 
-            this.addButtonProduct.Location = new System.Drawing.Point(12, 417);
-            this.addButtonProduct.Name = "addButtonProduct";
-            this.addButtonProduct.Size = new System.Drawing.Size(233, 22);
-            this.addButtonProduct.StyleController = this.layoutControl2;
-            this.addButtonProduct.TabIndex = 5;
-            this.addButtonProduct.Text = "Dodaj produkt";
-            this.addButtonProduct.Click += new System.EventHandler(this.addButtonProduct_Click);
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.addButtonProduct;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 405);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(237, 26);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            // 
-            // deleteButtonProduct
-            // 
-            this.deleteButtonProduct.Location = new System.Drawing.Point(475, 417);
-            this.deleteButtonProduct.Name = "deleteButtonProduct";
-            this.deleteButtonProduct.Size = new System.Drawing.Size(205, 22);
-            this.deleteButtonProduct.StyleController = this.layoutControl2;
-            this.deleteButtonProduct.TabIndex = 6;
-            this.deleteButtonProduct.Text = "Usuń produkt";
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.deleteButtonProduct;
-            this.layoutControlItem12.Location = new System.Drawing.Point(463, 405);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(209, 26);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem12.TextVisible = false;
-            // 
-            // editButtonProduct
-            // 
-            this.editButtonProduct.Location = new System.Drawing.Point(249, 417);
-            this.editButtonProduct.Name = "editButtonProduct";
-            this.editButtonProduct.Size = new System.Drawing.Size(222, 22);
-            this.editButtonProduct.StyleController = this.layoutControl2;
-            this.editButtonProduct.TabIndex = 7;
-            this.editButtonProduct.Text = "Edytuj produkt";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.editButtonProduct;
-            this.layoutControlItem13.Location = new System.Drawing.Point(237, 405);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(226, 26);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
             // PatternsProject
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -653,7 +699,14 @@ namespace PatternsProject
             this.customersNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.navigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
@@ -670,12 +723,6 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -731,5 +778,10 @@ namespace PatternsProject
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colCost;
+        private DevExpress.XtraGrid.Columns.GridColumn colEAN;
     }
 }
