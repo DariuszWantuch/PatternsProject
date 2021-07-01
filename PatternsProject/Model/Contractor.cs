@@ -12,6 +12,9 @@ namespace PatternsProject.Model
         public virtual string NIP { get; set; }
         public virtual string Name { get; set; }
         public virtual string Email { get; set; }
-       
+        public virtual string Address { get; set; }
+        public virtual string Phone { get; set; }
+        public virtual IList<Invoice> Invoices { get; set; }
+
     }
 }

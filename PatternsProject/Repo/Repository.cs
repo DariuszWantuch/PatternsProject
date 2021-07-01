@@ -43,12 +43,12 @@ namespace PatternsProject.Repo
             }
         }
 
-        public IEnumerable<T> GetAll()
+        public List<T> GetAll()
         {
             using (ISession session = NHService.OpenSession())
             using (ITransaction tran = session.BeginTransaction())
             {
-                return session.QueryOver<T>().List();
+                return session.Query<T>().ToList();
             }
         }
 

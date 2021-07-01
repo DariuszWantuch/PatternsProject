@@ -52,6 +52,7 @@ namespace PatternsProject.Service
         {
             var m = new List<Type>();
             m.Add(typeof(ProductMap));
+            m.Add(typeof(ContractorMap));
             return m;
         }
 

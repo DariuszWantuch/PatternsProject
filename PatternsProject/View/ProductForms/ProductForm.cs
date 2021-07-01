@@ -72,8 +72,7 @@ namespace PatternsProject.View.ProductForms
                 XtraMessageBox.Show("Produkt został pomyślnie zaktualizowany. ", "Aktualizacja produktu", MessageBoxButtons.OK);
 
                 this.DialogResult = DialogResult.OK;
-            }
-            
+            }      
         }
 
         private void resetButtonAddProduct_Click(object sender, EventArgs e)
