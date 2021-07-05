@@ -97,6 +97,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Repo\ContractorRepository.cs" />
+    <Compile Include="Repo\InvoiceRepository.cs" />
     <Compile Include="Repo\ProductRepository.cs" />
     <Compile Include="Repo\Repository.cs" />
     <Compile Include="Service\NHService.cs" />
@@ -107,6 +108,24 @@
     </Compile>
     <Compile Include="View\ContractorForms\ContractorForm.Designer.cs">
       <DependentUpon>ContractorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvoiceForms\AddContractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceForms\AddContractorForm.Designer.cs">
+      <DependentUpon>AddContractorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvoiceForms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceForms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InvoiceForms\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceForms\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ProductForms\ProductForm.cs">
       <SubType>Form</SubType>
@@ -129,6 +148,15 @@
     </Compile>
     <EmbeddedResource Include="View\ContractorForms\ContractorForm.resx">
       <DependentUpon>ContractorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceForms\AddContractorForm.resx">
+      <DependentUpon>AddContractorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceForms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceForms\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductForms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>

@@ -3,6 +3,7 @@ using PatternsProject.Model;
 using PatternsProject.Repo;
 using PatternsProject.Service;
 using PatternsProject.View.ContractorForms;
+using PatternsProject.View.InvoiceForms;
 using PatternsProject.View.ProductForms;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace PatternsProject
         private ProductService productService = new ProductService();
         private ContractorService contractorService = new ContractorService();
         private ProductRepository productRepository = new ProductRepository();
+        private InvoiceRepository invoiceRepository = new InvoiceRepository();
         private List<Product> productList = new List<Product>();
         private ContractorRepository contractorRepository = new ContractorRepository();
 
@@ -110,6 +112,17 @@ namespace PatternsProject
             if (result == true)
             {
                 gridControlContractor.DataSource = contractorRepository.GetAll();
+            }
+        }
+
+        private void addButtonInvoice_Click(object sender, EventArgs e)
+        {
+            using (InvoiceForm invoiceForm = new InvoiceForm())
+            {
+                if (invoiceForm.ShowDialog() == DialogResult.OK)
+                {
+                    gridControlInvoice.DataSource = invoiceRepository.GetAll();
+                }
             }
         }
     }
