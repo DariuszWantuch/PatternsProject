@@ -163,6 +163,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PatternsProject.Model.Contractor.datasource" />
+    <None Include="Properties\DataSources\PatternsProject.Model.Element.datasource" />
     <None Include="Properties\DataSources\PatternsProject.Model.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

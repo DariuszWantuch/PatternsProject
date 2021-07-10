@@ -34,7 +34,8 @@ namespace PatternsProject
             this.CenterToScreen();
           
             gridControlContractor.DataSource = contractorRepository.GetAll();
-            gridControlProduct.DataSource = productRepository.GetAll(); ;
+            gridControlProduct.DataSource = productRepository.GetAll();
+            gridControlInvoice.DataSource = invoiceRepository.GetAll();
         }
 
         private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
