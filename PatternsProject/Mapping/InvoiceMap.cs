@@ -17,6 +17,7 @@ namespace PatternsProject.Mapping
             Schema("dbo");
             Id(x => x.Id, map => map.Generator(Generators.Identity));
             Property(x => x.Date);
+            Property(x => x.CostSum);
 
             ManyToOne(x => x.Contractor, x =>
             {

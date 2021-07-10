@@ -31,13 +31,6 @@ namespace PatternsProject.View.InvoiceForms
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.deleteButton = new DevExpress.XtraEditors.SimpleButton();
-            this.resetButton = new DevExpress.XtraEditors.SimpleButton();
-            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
-            this.backButton = new DevExpress.XtraEditors.SimpleButton();
-            this.addButtonProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.addButtonContractor = new DevExpress.XtraEditors.SimpleButton();
-            this.textEditAddContractor = new DevExpress.XtraEditors.TextEdit();
             this.gridControlInvoiceElement = new DevExpress.XtraGrid.GridControl();
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewInvoiceElement = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,8 +41,15 @@ namespace PatternsProject.View.InvoiceForms
             this.colInvoice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProduct = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colElementCost = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deleteButton = new DevExpress.XtraEditors.SimpleButton();
+            this.resetButton = new DevExpress.XtraEditors.SimpleButton();
+            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
+            this.backButton = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonContractor = new DevExpress.XtraEditors.SimpleButton();
+            this.textEditAddContractor = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Kontrahent = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -57,14 +57,14 @@ namespace PatternsProject.View.InvoiceForms
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditAddContractor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoiceElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoiceElement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAddContractor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Kontrahent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -72,10 +72,12 @@ namespace PatternsProject.View.InvoiceForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.gridControlInvoiceElement);
             this.layoutControl1.Controls.Add(this.deleteButton);
             this.layoutControl1.Controls.Add(this.resetButton);
             this.layoutControl1.Controls.Add(this.saveButton);
@@ -83,7 +85,6 @@ namespace PatternsProject.View.InvoiceForms
             this.layoutControl1.Controls.Add(this.addButtonProduct);
             this.layoutControl1.Controls.Add(this.addButtonContractor);
             this.layoutControl1.Controls.Add(this.textEditAddContractor);
-            this.layoutControl1.Controls.Add(this.gridControlInvoiceElement);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -91,6 +92,87 @@ namespace PatternsProject.View.InvoiceForms
             this.layoutControl1.Size = new System.Drawing.Size(498, 468);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // gridControlInvoiceElement
+            // 
+            this.gridControlInvoiceElement.DataSource = this.elementBindingSource;
+            this.gridControlInvoiceElement.Location = new System.Drawing.Point(12, 62);
+            this.gridControlInvoiceElement.MainView = this.gridViewInvoiceElement;
+            this.gridControlInvoiceElement.Name = "gridControlInvoiceElement";
+            this.gridControlInvoiceElement.Size = new System.Drawing.Size(474, 368);
+            this.gridControlInvoiceElement.TabIndex = 12;
+            this.gridControlInvoiceElement.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewInvoiceElement});
+            // 
+            // gridViewInvoiceElement
+            // 
+            this.gridViewInvoiceElement.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colQuantity,
+            this.colUnitPrice,
+            this.colProducts,
+            this.colInvoice,
+            this.colProduct,
+            this.colProductName,
+            this.colElementCost});
+            this.gridViewInvoiceElement.GridControl = this.gridControlInvoiceElement;
+            this.gridViewInvoiceElement.GroupPanelText = "Przeciągnij kolumne tutaj aby po niej posegregować";
+            this.gridViewInvoiceElement.Name = "gridViewInvoiceElement";
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.Caption = "Ilość";
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 1;
+            // 
+            // colUnitPrice
+            // 
+            this.colUnitPrice.Caption = "Cena za szt.";
+            this.colUnitPrice.FieldName = "UnitPrice";
+            this.colUnitPrice.Name = "colUnitPrice";
+            this.colUnitPrice.Visible = true;
+            this.colUnitPrice.VisibleIndex = 2;
+            // 
+            // colProducts
+            // 
+            this.colProducts.FieldName = "Products";
+            this.colProducts.Name = "colProducts";
+            // 
+            // colInvoice
+            // 
+            this.colInvoice.FieldName = "Invoice";
+            this.colInvoice.Name = "colInvoice";
+            // 
+            // colProduct
+            // 
+            this.colProduct.FieldName = "Product";
+            this.colProduct.Name = "colProduct";
+            // 
+            // colProductName
+            // 
+            this.colProductName.Caption = "Nazwa produktu";
+            this.colProductName.FieldName = "ProductName";
+            this.colProductName.Name = "colProductName";
+            this.colProductName.OptionsColumn.AllowEdit = false;
+            this.colProductName.OptionsColumn.ReadOnly = true;
+            this.colProductName.Visible = true;
+            this.colProductName.VisibleIndex = 0;
+            // 
+            // colElementCost
+            // 
+            this.colElementCost.Caption = "Całkowity koszt";
+            this.colElementCost.FieldName = "ElementCost";
+            this.colElementCost.Name = "colElementCost";
+            this.colElementCost.OptionsColumn.AllowEdit = false;
+            this.colElementCost.Visible = true;
+            this.colElementCost.VisibleIndex = 3;
             // 
             // deleteButton
             // 
@@ -154,107 +236,29 @@ namespace PatternsProject.View.InvoiceForms
             // 
             // textEditAddContractor
             // 
+            this.textEditAddContractor.Enabled = false;
             this.textEditAddContractor.Location = new System.Drawing.Point(78, 12);
             this.textEditAddContractor.Name = "textEditAddContractor";
             this.textEditAddContractor.Size = new System.Drawing.Size(408, 20);
             this.textEditAddContractor.StyleController = this.layoutControl1;
             this.textEditAddContractor.TabIndex = 5;
             // 
-            // gridControlInvoiceElement
-            // 
-            this.gridControlInvoiceElement.DataSource = this.elementBindingSource;
-            this.gridControlInvoiceElement.Location = new System.Drawing.Point(12, 62);
-            this.gridControlInvoiceElement.MainView = this.gridViewInvoiceElement;
-            this.gridControlInvoiceElement.Name = "gridControlInvoiceElement";
-            this.gridControlInvoiceElement.Size = new System.Drawing.Size(474, 368);
-            this.gridControlInvoiceElement.TabIndex = 4;
-            this.gridControlInvoiceElement.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewInvoiceElement});
-            // 
-            // gridViewInvoiceElement
-            // 
-            this.gridViewInvoiceElement.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colQuantity,
-            this.colUnitPrice,
-            this.colProducts,
-            this.colInvoice,
-            this.colProduct,
-            this.colProductName});
-            this.gridViewInvoiceElement.GridControl = this.gridControlInvoiceElement;
-            this.gridViewInvoiceElement.GroupPanelText = "Przeciągnij tutaj kolumne aby po niej posegregować";
-            this.gridViewInvoiceElement.Name = "gridViewInvoiceElement";
-            // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.Caption = "Ilość";
-            this.colQuantity.FieldName = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Visible = true;
-            this.colQuantity.VisibleIndex = 0;
-            // 
-            // colUnitPrice
-            // 
-            this.colUnitPrice.Caption = "Cena za szt";
-            this.colUnitPrice.FieldName = "UnitPrice";
-            this.colUnitPrice.Name = "colUnitPrice";
-            this.colUnitPrice.Visible = true;
-            this.colUnitPrice.VisibleIndex = 1;
-            // 
-            // colProducts
-            // 
-            this.colProducts.FieldName = "Products";
-            this.colProducts.Name = "colProducts";
-            // 
-            // colInvoice
-            // 
-            this.colInvoice.FieldName = "Invoice";
-            this.colInvoice.Name = "colInvoice";
-            // 
-            // colProduct
-            // 
-            this.colProduct.FieldName = "Product";
-            this.colProduct.Name = "colProduct";
-            // 
-            // colProductName
-            // 
-            this.colProductName.Caption = "Nazwa produktu";
-            this.colProductName.FieldName = "ProductName";
-            this.colProductName.Name = "colProductName";
-            this.colProductName.OptionsColumn.ReadOnly = true;
-            this.colProductName.Visible = true;
-            this.colProductName.VisibleIndex = 2;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
             this.Kontrahent,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(498, 468);
             this.Root.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.gridControlInvoiceElement;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(478, 372);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
             // 
             // Kontrahent
             // 
@@ -318,6 +322,15 @@ namespace PatternsProject.View.InvoiceForms
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControlInvoiceElement;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(478, 372);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,12 +341,11 @@ namespace PatternsProject.View.InvoiceForms
             this.Text = "Dodawanie faktury";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEditAddContractor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoiceElement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoiceElement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditAddContractor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Kontrahent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -341,6 +353,7 @@ namespace PatternsProject.View.InvoiceForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,9 +369,6 @@ namespace PatternsProject.View.InvoiceForms
         private DevExpress.XtraEditors.SimpleButton addButtonProduct;
         private DevExpress.XtraEditors.SimpleButton addButtonContractor;
         private DevExpress.XtraEditors.TextEdit textEditAddContractor;
-        private DevExpress.XtraGrid.GridControl gridControlInvoiceElement;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewInvoiceElement;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem Kontrahent;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -366,6 +376,9 @@ namespace PatternsProject.View.InvoiceForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraGrid.GridControl gridControlInvoiceElement;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewInvoiceElement;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource elementBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
@@ -374,5 +387,6 @@ namespace PatternsProject.View.InvoiceForms
         private DevExpress.XtraGrid.Columns.GridColumn colInvoice;
         private DevExpress.XtraGrid.Columns.GridColumn colProduct;
         private DevExpress.XtraGrid.Columns.GridColumn colProductName;
+        private DevExpress.XtraGrid.Columns.GridColumn colElementCost;
     }
 }

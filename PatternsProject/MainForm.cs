@@ -23,7 +23,7 @@ namespace PatternsProject
         private ProductService productService = new ProductService();
         private ContractorService contractorService = new ContractorService();
         private ProductRepository productRepository = new ProductRepository();
-        private InvoiceRepository invoiceRepository = new InvoiceRepository();
+        private InvoiceRepository invoiceRepository = new InvoiceRepository();       
         private List<Product> productList = new List<Product>();
         private ContractorRepository contractorRepository = new ContractorRepository();
 
@@ -33,6 +33,8 @@ namespace PatternsProject
             NHService.Init();
             this.CenterToScreen();
           
+            
+
             gridControlContractor.DataSource = contractorRepository.GetAll();
             gridControlProduct.DataSource = productRepository.GetAll();
             gridControlInvoice.DataSource = invoiceRepository.GetAll();
@@ -123,6 +125,18 @@ namespace PatternsProject
                 if (invoiceForm.ShowDialog() == DialogResult.OK)
                 {
                     gridControlInvoice.DataSource = invoiceRepository.GetAll();
+                }
+            }
+        }
+
+        private void viewButtonInvoice_Click(object sender, EventArgs e)
+        {
+            var test = (Invoice)gridViewInvoice.GetFocusedRow();
+            using (ViewInvoiceForm viewInvoiceForm = new ViewInvoiceForm(test.Id))
+            {
+                if (viewInvoiceForm.ShowDialog() == DialogResult.OK)
+                {
+                    
                 }
             }
         }

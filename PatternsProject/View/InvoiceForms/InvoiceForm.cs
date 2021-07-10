@@ -35,7 +35,7 @@ namespace PatternsProject.View.InvoiceForms
                 {
                     contractor = addContractorForm.contractor;
 
-                    textEditAddContractor.Text = contractor.Name + ", " + contractor.Address + ", " + contractor.Phone;
+                    textEditAddContractor.Text = contractor.Name + ", " + contractor.PostalCode + " " + contractor.City + ", " + contractor.Street +  ", "+  contractor.Phone;
                 }
             }
         }
@@ -49,6 +49,10 @@ namespace PatternsProject.View.InvoiceForms
                     Element element = new Element();
 
                     element.Product = addProductForm.product;
+
+                    element.UnitPrice = Convert.ToDouble(addProductForm.product.Cost);
+
+                    element.Quantity = 1;
 
                     elements.Add(element);
 
@@ -89,21 +93,24 @@ namespace PatternsProject.View.InvoiceForms
             if(contractor.Id == 0)
             {
                 XtraMessageBox.Show("Brak kontrahenta.","Powiadomienie",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }else if (elements.Count() == 0)
             {
                 XtraMessageBox.Show("Brak elementów.", "Powiadomienie", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             invoice.Contractor = contractor;
             invoice.ElementList = elements.ToHashSet();
-            invoice.Date = DateTime.Today;
+            invoice.Date = DateTime.Today;        
 
             foreach (var item in elements)
             {
                 item.Invoice = invoice;
+                invoice.CostSum += item.ElementCost;
             }
             invoiceRepository.Save(invoice);
 
             this.DialogResult = DialogResult.OK;
-        }
+        }      
     }
 }

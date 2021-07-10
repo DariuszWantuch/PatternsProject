@@ -127,6 +127,12 @@
     <Compile Include="View\InvoiceForms\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\InvoiceForms\ViewInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceForms\ViewInvoiceForm.Designer.cs">
+      <DependentUpon>ViewInvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ProductForms\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,12 +164,16 @@
     <EmbeddedResource Include="View\InvoiceForms\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\InvoiceForms\ViewInvoiceForm.resx">
+      <DependentUpon>ViewInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ProductForms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PatternsProject.Model.Contractor.datasource" />
     <None Include="Properties\DataSources\PatternsProject.Model.Element.datasource" />
+    <None Include="Properties\DataSources\PatternsProject.Model.Invoice.datasource" />
     <None Include="Properties\DataSources\PatternsProject.Model.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

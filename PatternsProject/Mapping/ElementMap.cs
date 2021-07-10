@@ -18,6 +18,7 @@ namespace PatternsProject.Mapping
             Id(x => x.Id, map => map.Generator(Generators.Identity));
             Property(x => x.Quantity);
             Property(x => x.UnitPrice);
+            Property(x => x.ElementCost);
 
             ManyToOne(x => x.Product, m =>
             {

@@ -34,11 +34,14 @@ namespace PatternsProject.View.ContractorForms
 
             contractorId = selectedContractor.Id;
 
-            textEditContractorAddress.Text = selectedContractor.Address;
+            //textEditContractorAddress.Text = selectedContractor.Address;
             textEditContractorEmail.Text = selectedContractor.Email;
             textEditContractorName.Text = selectedContractor.Name;
             textEditContractorNIP.Text = selectedContractor.NIP;
             textEditContractorPhone.Text = selectedContractor.Phone;
+            textEditContractorPostalCode.Text = selectedContractor.PostalCode;
+            textEditContractorCity.Text = selectedContractor.City;
+            textEditContractorStreet.Text = selectedContractor.Street;
         }
 
         private void backButtonContractor_Click(object sender, EventArgs e)
@@ -47,12 +50,14 @@ namespace PatternsProject.View.ContractorForms
         }
 
         private void resetButtonContractor_Click(object sender, EventArgs e)
-        {
-            textEditContractorAddress.Text = "";
+        {           
             textEditContractorEmail.Text = "";
             textEditContractorName.Text = "";
             textEditContractorNIP.Text = "";
             textEditContractorPhone.Text = "";
+            textEditContractorPostalCode.Text = "";
+            textEditContractorCity.Text = "";
+            textEditContractorStreet.Text = "";
         }
 
         private void saveButtonContractor_Click(object sender, EventArgs e)
@@ -61,11 +66,14 @@ namespace PatternsProject.View.ContractorForms
             {
                 var contractor = new Contractor()
                 {
-                    Address = textEditContractorAddress.Text.ToString(),
+                    //Address = textEditContractorAddress.Text.ToString(),
                     Email = textEditContractorEmail.Text.ToString(),
                     Name = textEditContractorName.Text.ToString(),
                     NIP = textEditContractorNIP.Text.ToString(),
-                    Phone = textEditContractorPhone.Text.ToString()
+                    Phone = textEditContractorPhone.Text.ToString(),
+                    Street = textEditContractorStreet.Text.ToString(),
+                    City = textEditContractorCity.Text.ToString(),
+                    PostalCode = textEditContractorPostalCode.Text.ToString(),
                 };
 
                 contractorRepository.Save(contractor);
@@ -76,11 +84,14 @@ namespace PatternsProject.View.ContractorForms
             }
             else
             {
-                _selectedContractor.Address = textEditContractorAddress.Text.ToString();
+                //_selectedContractor.Address = textEditContractorAddress.Text.ToString();
                 _selectedContractor.Email = textEditContractorEmail.Text.ToString();
                 _selectedContractor.Name = textEditContractorName.Text.ToString();
                 _selectedContractor.NIP = textEditContractorNIP.Text.ToString();
                 _selectedContractor.Phone = textEditContractorPhone.Text.ToString();
+                _selectedContractor.Street = textEditContractorStreet.Text.ToString();
+                _selectedContractor.City = textEditContractorCity.Text.ToString();
+                _selectedContractor.PostalCode = textEditContractorPostalCode.Text.ToString();
 
                 contractorRepository.Save(_selectedContractor);
 

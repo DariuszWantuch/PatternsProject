@@ -45,16 +45,23 @@ namespace PatternsProject
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.deleteButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
-            this.editButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
-            this.addButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.gridControlInvoice = new DevExpress.XtraGrid.GridControl();
+            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewInvoice = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colElementList = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCostSum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colElements = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNIP1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.viewButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
+            this.addButtonInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.editButtonProduct = new DevExpress.XtraEditors.SimpleButton();
@@ -104,12 +111,12 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.customersNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -260,10 +267,9 @@ namespace PatternsProject
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.deleteButtonInvoice);
-            this.layoutControl1.Controls.Add(this.editButtonInvoice);
-            this.layoutControl1.Controls.Add(this.addButtonInvoice);
             this.layoutControl1.Controls.Add(this.gridControlInvoice);
+            this.layoutControl1.Controls.Add(this.viewButtonInvoice);
+            this.layoutControl1.Controls.Add(this.addButtonInvoice);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -273,62 +279,140 @@ namespace PatternsProject
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // deleteButtonInvoice
-            // 
-            this.deleteButtonInvoice.Location = new System.Drawing.Point(465, 417);
-            this.deleteButtonInvoice.Name = "deleteButtonInvoice";
-            this.deleteButtonInvoice.Size = new System.Drawing.Size(215, 22);
-            this.deleteButtonInvoice.StyleController = this.layoutControl1;
-            this.deleteButtonInvoice.TabIndex = 7;
-            this.deleteButtonInvoice.Text = "Usuń fakture";
-            // 
-            // editButtonInvoice
-            // 
-            this.editButtonInvoice.Location = new System.Drawing.Point(238, 417);
-            this.editButtonInvoice.Name = "editButtonInvoice";
-            this.editButtonInvoice.Size = new System.Drawing.Size(223, 22);
-            this.editButtonInvoice.StyleController = this.layoutControl1;
-            this.editButtonInvoice.TabIndex = 6;
-            this.editButtonInvoice.Text = "Edytuj fakture";
-            // 
-            // addButtonInvoice
-            // 
-            this.addButtonInvoice.Location = new System.Drawing.Point(12, 417);
-            this.addButtonInvoice.Name = "addButtonInvoice";
-            this.addButtonInvoice.Size = new System.Drawing.Size(222, 22);
-            this.addButtonInvoice.StyleController = this.layoutControl1;
-            this.addButtonInvoice.TabIndex = 5;
-            this.addButtonInvoice.Text = "Dodaj fakture";
-            this.addButtonInvoice.Click += new System.EventHandler(this.addButtonInvoice_Click);
-            // 
             // gridControlInvoice
             // 
+            this.gridControlInvoice.DataSource = this.invoiceBindingSource;
             this.gridControlInvoice.Location = new System.Drawing.Point(12, 12);
             this.gridControlInvoice.MainView = this.gridViewInvoice;
             this.gridControlInvoice.Name = "gridControlInvoice";
             this.gridControlInvoice.Size = new System.Drawing.Size(668, 401);
-            this.gridControlInvoice.TabIndex = 4;
+            this.gridControlInvoice.TabIndex = 8;
             this.gridControlInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewInvoice});
             // 
             // gridViewInvoice
             // 
+            this.gridViewInvoice.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId2,
+            this.colDate,
+            this.colContractor,
+            this.colElementList,
+            this.colCostSum,
+            this.colElements,
+            this.colName2,
+            this.colNIP1});
             this.gridViewInvoice.GridControl = this.gridControlInvoice;
-            this.gridViewInvoice.GroupPanelText = "Przeciągnij kolumne tutaj aby po niej posegregować";
+            this.gridViewInvoice.GroupPanelText = "Przeciągnij kolumnę tutaj aby posegregować";
             this.gridViewInvoice.Name = "gridViewInvoice";
+            // 
+            // colId2
+            // 
+            this.colId2.FieldName = "Id";
+            this.colId2.Name = "colId2";
+            // 
+            // colDate
+            // 
+            this.colDate.Caption = "Data przyjęcia";
+            this.colDate.FieldName = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.OptionsColumn.AllowEdit = false;
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 3;
+            // 
+            // colContractor
+            // 
+            this.colContractor.FieldName = "Contractor";
+            this.colContractor.Name = "colContractor";
+            // 
+            // colElementList
+            // 
+            this.colElementList.FieldName = "ElementList";
+            this.colElementList.Name = "colElementList";
+            // 
+            // colCostSum
+            // 
+            this.colCostSum.Caption = "Suma";
+            this.colCostSum.FieldName = "CostSum";
+            this.colCostSum.Name = "colCostSum";
+            this.colCostSum.OptionsColumn.AllowEdit = false;
+            this.colCostSum.Visible = true;
+            this.colCostSum.VisibleIndex = 1;
+            // 
+            // colElements
+            // 
+            this.colElements.Caption = "Liczba elementów";
+            this.colElements.FieldName = "Elements";
+            this.colElements.Name = "colElements";
+            this.colElements.OptionsColumn.AllowEdit = false;
+            this.colElements.OptionsColumn.ReadOnly = true;
+            this.colElements.Visible = true;
+            this.colElements.VisibleIndex = 2;
+            // 
+            // colName2
+            // 
+            this.colName2.Caption = "Akronim";
+            this.colName2.FieldName = "Name";
+            this.colName2.Name = "colName2";
+            this.colName2.OptionsColumn.AllowEdit = false;
+            this.colName2.OptionsColumn.ReadOnly = true;
+            this.colName2.Visible = true;
+            this.colName2.VisibleIndex = 0;
+            // 
+            // colNIP1
+            // 
+            this.colNIP1.FieldName = "NIP";
+            this.colNIP1.Name = "colNIP1";
+            this.colNIP1.OptionsColumn.ReadOnly = true;
+            // 
+            // viewButtonInvoice
+            // 
+            this.viewButtonInvoice.Location = new System.Drawing.Point(341, 417);
+            this.viewButtonInvoice.Name = "viewButtonInvoice";
+            this.viewButtonInvoice.Size = new System.Drawing.Size(339, 22);
+            this.viewButtonInvoice.StyleController = this.layoutControl1;
+            this.viewButtonInvoice.TabIndex = 6;
+            this.viewButtonInvoice.Text = "Zobacz fakturę";
+            this.viewButtonInvoice.Click += new System.EventHandler(this.viewButtonInvoice_Click);
+            // 
+            // addButtonInvoice
+            // 
+            this.addButtonInvoice.Location = new System.Drawing.Point(12, 417);
+            this.addButtonInvoice.Name = "addButtonInvoice";
+            this.addButtonInvoice.Size = new System.Drawing.Size(325, 22);
+            this.addButtonInvoice.StyleController = this.layoutControl1;
+            this.addButtonInvoice.TabIndex = 5;
+            this.addButtonInvoice.Text = "Dodaj fakture";
+            this.addButtonInvoice.Click += new System.EventHandler(this.addButtonInvoice_Click);
             // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(692, 451);
             this.Root.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.addButtonInvoice;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(329, 26);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.viewButtonInvoice;
+            this.layoutControlItem6.Location = new System.Drawing.Point(329, 405);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(343, 26);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem4
             // 
@@ -338,33 +422,6 @@ namespace PatternsProject
             this.layoutControlItem4.Size = new System.Drawing.Size(672, 405);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.addButtonInvoice;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 405);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(226, 26);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.editButtonInvoice;
-            this.layoutControlItem6.Location = new System.Drawing.Point(226, 405);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(227, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.deleteButtonInvoice;
-            this.layoutControlItem7.Location = new System.Drawing.Point(453, 405);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(219, 26);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
             // 
             // customersNavigationPage
             // 
@@ -760,12 +817,12 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.customersNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -822,15 +879,10 @@ namespace PatternsProject
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private DevExpress.XtraEditors.SimpleButton deleteButtonInvoice;
-        private DevExpress.XtraEditors.SimpleButton editButtonInvoice;
+        private DevExpress.XtraEditors.SimpleButton viewButtonInvoice;
         private DevExpress.XtraEditors.SimpleButton addButtonInvoice;
-        private DevExpress.XtraGrid.GridControl gridControlInvoice;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewInvoice;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.SimpleButton editButtonContractor;
         private DevExpress.XtraEditors.SimpleButton deleteButtonContractor;
         private DevExpress.XtraEditors.SimpleButton addButtonContractor;
@@ -862,5 +914,17 @@ namespace PatternsProject
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colPhone;
         private DevExpress.XtraGrid.Columns.GridColumn colInvoices;
+        private DevExpress.XtraGrid.GridControl gridControlInvoice;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewInvoice;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private System.Windows.Forms.BindingSource invoiceBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId2;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractor;
+        private DevExpress.XtraGrid.Columns.GridColumn colElementList;
+        private DevExpress.XtraGrid.Columns.GridColumn colCostSum;
+        private DevExpress.XtraGrid.Columns.GridColumn colElements;
+        private DevExpress.XtraGrid.Columns.GridColumn colName2;
+        private DevExpress.XtraGrid.Columns.GridColumn colNIP1;
     }
 }

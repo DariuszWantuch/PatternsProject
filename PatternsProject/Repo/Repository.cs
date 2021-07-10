@@ -25,7 +25,7 @@ namespace PatternsProject.Repo
         {
             using (ISession session = NHService.OpenSession())
             using (ITransaction tran = session.BeginTransaction())
-            {
+            {             
                 session.Delete(entity);
 
                 tran.Commit();

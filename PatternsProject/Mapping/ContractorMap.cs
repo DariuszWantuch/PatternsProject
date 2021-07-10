@@ -19,7 +19,9 @@ namespace PatternsProject.Mapping
             Property(x => x.NIP);
             Property(x => x.Name);
             Property(x => x.Email);
-            Property(x => x.Address);
+            Property(x => x.PostalCode);
+            Property(x => x.City);
+            Property(x => x.Street);
             Property(x => x.Phone);
         }
     }

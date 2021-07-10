@@ -12,16 +12,30 @@ namespace PatternsProject.Model
         public virtual DateTime Date { get; set; }
         public virtual Contractor Contractor { get; set; }
         public virtual ISet<Element> ElementList { get; set; }
+        public virtual double CostSum { get; set; }
 
-        public virtual Contractor contractor { get; set; }
+        public virtual int Elements
+        {
+            get
+            {
+                if (ElementList.Count() != 0)
+                {
+                    return ElementList.Count();
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
 
         public virtual string Name
         {
             get
             {
-                if (contractor != null)
+                if (Contractor != null)
                 {
-                    return contractor.Name;
+                    return Contractor.Name;
                 }
                 else
                 {
@@ -34,9 +48,9 @@ namespace PatternsProject.Model
         {
             get
             {
-                if (contractor != null)
+                if (Contractor != null)
                 {
-                    return contractor.NIP;
+                    return Contractor.NIP;
                 }
                 else
                 {
