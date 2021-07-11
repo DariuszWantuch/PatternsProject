@@ -18,6 +18,7 @@ namespace PatternsProject.Mapping
             Id(x => x.Id, map => map.Generator(Generators.Identity));
             Property(x => x.Date);
             Property(x => x.CostSum);
+            Property(x => x.DueDate);
 
             ManyToOne(x => x.Contractor, x =>
             {

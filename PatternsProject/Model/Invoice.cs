@@ -10,9 +10,35 @@ namespace PatternsProject.Model
     {
         public virtual int Id { get; set; }
         public virtual DateTime Date { get; set; }
+        public virtual DateTime DueDate { get; set; }
         public virtual Contractor Contractor { get; set; }
         public virtual ISet<Element> ElementList { get; set; }
         public virtual double CostSum { get; set; }
+
+        public virtual string CostSumString 
+        {
+            get
+            {
+                return CostSum.ToString();
+            }
+        }
+
+        public virtual string DueDateString
+        {
+            get
+            {
+                return DueDate.ToString("dd/MMMM/yyyy");
+            }
+        }
+
+        public virtual string DateString
+        {
+            get
+            {
+                return Date.ToString("dd/MMMM/yyyy");
+            }
+        }
+
 
         public virtual int Elements
         {

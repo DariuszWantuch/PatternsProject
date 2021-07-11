@@ -16,7 +16,16 @@ namespace PatternsProject.Model
         public virtual string City { get; set; }
         public virtual string Street { get; set; }
         public virtual string Phone { get; set; }
-        public virtual IList<Invoice> Invoices { get; set; }
+        public virtual IList<Invoice> Invoices { get; set; }  
+        
+        public virtual string Address 
+        { 
+            get
+            {
+                return PostalCode + " " + City;
+            }
+        }
+
 
     }
 }

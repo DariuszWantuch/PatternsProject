@@ -19,6 +19,7 @@ namespace PatternsProject.Mapping
             Property(x => x.Name);
             Property(x => x.Cost);
             Property(x => x.EAN);
+            Property(x => x.Description);
         }
     }
 }

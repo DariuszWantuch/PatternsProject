@@ -37,6 +37,7 @@ namespace PatternsProject.View.ProductForms
             textEditProductCost.Text = selectedProduct.Cost;
             textEditProductEAN.Text = selectedProduct.EAN;
             textEditProductName.Text = selectedProduct.Name;
+            memoEditProductDescription.Text = selectedProduct.Description;
         }
 
         private void backButtonAddProduct_Click(object sender, EventArgs e)
@@ -52,7 +53,8 @@ namespace PatternsProject.View.ProductForms
                 {
                     Name = textEditProductName.Text.ToString(),
                     Cost = textEditProductCost.Text.ToString(),
-                    EAN = textEditProductEAN.Text.ToString()
+                    EAN = textEditProductEAN.Text.ToString(),
+                    Description = memoEditProductDescription.Text.ToString(),
                 };
 
                 productRepository.Save(product);
@@ -66,6 +68,7 @@ namespace PatternsProject.View.ProductForms
                 _selectedProduct.Cost = textEditProductCost.Text.ToString();
                 _selectedProduct.Name = textEditProductName.Text.ToString();
                 _selectedProduct.EAN = textEditProductEAN.Text.ToString();
+                _selectedProduct.Description = memoEditProductDescription.Text.ToString();
 
                 productRepository.Save(_selectedProduct);
 
@@ -80,6 +83,7 @@ namespace PatternsProject.View.ProductForms
             textEditProductCost.Text = "";
             textEditProductName.Text = "";
             textEditProductEAN.Text = "";
+            memoEditProductDescription.Text = "";
         }
     }
 }

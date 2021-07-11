@@ -101,7 +101,8 @@ namespace PatternsProject.View.InvoiceForms
             }
             invoice.Contractor = contractor;
             invoice.ElementList = elements.ToHashSet();
-            invoice.Date = DateTime.Today;        
+            invoice.Date = DateTime.Today;
+            invoice.DueDate = DateTime.Today.AddDays(10);
 
             foreach (var item in elements)
             {
