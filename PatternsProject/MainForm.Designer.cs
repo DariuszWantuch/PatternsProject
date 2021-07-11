@@ -31,11 +31,11 @@ namespace PatternsProject
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatternsProject));
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.invoicesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -101,10 +101,27 @@ namespace PatternsProject
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.gridControlSendInvoice = new DevExpress.XtraGrid.GridControl();
+            this.gridViewSendInvoice = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.sendButtonEmail = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.genereteButtonPdf = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.invoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.colId3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDueDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractor1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colElementList1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCostSum1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCostSumString = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDueDateString = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDateString = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colElements1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNIP2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -143,8 +160,12 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSendInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSendInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tileBar
@@ -194,47 +215,47 @@ namespace PatternsProject
             // invoicesTileBarItem
             // 
             this.invoicesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement1.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-            tileItemElement1.Text = "Faktury";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.invoicesTileBarItem.Elements.Add(tileItemElement1);
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement5.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+            tileItemElement5.Text = "Faktury";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.invoicesTileBarItem.Elements.Add(tileItemElement5);
             this.invoicesTileBarItem.Id = 1;
             this.invoicesTileBarItem.Name = "invoicesTileBarItem";
             // 
             // productsTileBarItem
             // 
             this.productsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement2.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement2.Text = "Produkty";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.productsTileBarItem.Elements.Add(tileItemElement2);
+            tileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement6.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement6.Text = "Produkty";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.productsTileBarItem.Elements.Add(tileItemElement6);
             this.productsTileBarItem.Id = 2;
             this.productsTileBarItem.Name = "productsTileBarItem";
             // 
             // contractorsTileBarItem
             // 
             this.contractorsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement3.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-            tileItemElement3.Text = "Kontrahenci";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.contractorsTileBarItem.Elements.Add(tileItemElement3);
+            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement7.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+            tileItemElement7.Text = "Kontrahenci";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.contractorsTileBarItem.Elements.Add(tileItemElement7);
             this.contractorsTileBarItem.Id = 3;
             this.contractorsTileBarItem.Name = "contractorsTileBarItem";
             // 
             // sendsTileBarItem
             // 
             this.sendsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement4.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-            tileItemElement4.Text = "Wysyłka potwierdzeń";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.sendsTileBarItem.Elements.Add(tileItemElement4);
+            tileItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement8.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+            tileItemElement8.Text = "Wysyłka potwierdzeń";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.sendsTileBarItem.Elements.Add(tileItemElement8);
             this.sendsTileBarItem.Id = 4;
             this.sendsTileBarItem.Name = "sendsTileBarItem";
             // 
@@ -425,7 +446,6 @@ namespace PatternsProject
             // 
             // customersNavigationPage
             // 
-            this.customersNavigationPage.Caption = "customersNavigationPage";
             this.customersNavigationPage.Controls.Add(this.layoutControl2);
             this.customersNavigationPage.Name = "customersNavigationPage";
             this.customersNavigationPage.Size = new System.Drawing.Size(692, 451);
@@ -575,7 +595,6 @@ namespace PatternsProject
             // 
             // navigationPage1
             // 
-            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.layoutControl3);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(692, 451);
@@ -754,7 +773,9 @@ namespace PatternsProject
             // 
             // layoutControl4
             // 
-            this.layoutControl4.Controls.Add(this.labelControl4);
+            this.layoutControl4.Controls.Add(this.genereteButtonPdf);
+            this.layoutControl4.Controls.Add(this.sendButtonEmail);
+            this.layoutControl4.Controls.Add(this.gridControlSendInvoice);
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl4.Location = new System.Drawing.Point(0, 0);
             this.layoutControl4.Name = "layoutControl4";
@@ -763,42 +784,172 @@ namespace PatternsProject
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 12);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(106, 13);
-            this.labelControl4.StyleController = this.layoutControl4;
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Wysyłka powiadomień";
-            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
-            this.emptySpaceItem4});
+            this.layoutControlItem7,
+            this.layoutControlItem14});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(692, 451);
             this.layoutControlGroup3.TextVisible = false;
             // 
+            // gridControlSendInvoice
+            // 
+            this.gridControlSendInvoice.DataSource = this.invoiceBindingSource1;
+            this.gridControlSendInvoice.Location = new System.Drawing.Point(12, 12);
+            this.gridControlSendInvoice.MainView = this.gridViewSendInvoice;
+            this.gridControlSendInvoice.Name = "gridControlSendInvoice";
+            this.gridControlSendInvoice.Size = new System.Drawing.Size(668, 401);
+            this.gridControlSendInvoice.TabIndex = 4;
+            this.gridControlSendInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewSendInvoice});
+            // 
+            // gridViewSendInvoice
+            // 
+            this.gridViewSendInvoice.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId3,
+            this.colDate1,
+            this.colDueDate,
+            this.colContractor1,
+            this.colElementList1,
+            this.colCostSum1,
+            this.colCostSumString,
+            this.colDueDateString,
+            this.colDateString,
+            this.colElements1,
+            this.colName3,
+            this.colNIP2});
+            this.gridViewSendInvoice.GridControl = this.gridControlSendInvoice;
+            this.gridViewSendInvoice.GroupPanelText = "Przeciągnij tutaj kolumnę aby po niej posegregować";
+            this.gridViewSendInvoice.Name = "gridViewSendInvoice";
+            // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.labelControl4;
+            this.layoutControlItem3.Control = this.gridControlSendInvoice;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(672, 17);
+            this.layoutControlItem3.Size = new System.Drawing.Size(672, 405);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // emptySpaceItem4
+            // sendButtonEmail
             // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 17);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(672, 414);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.sendButtonEmail.Location = new System.Drawing.Point(12, 417);
+            this.sendButtonEmail.Name = "sendButtonEmail";
+            this.sendButtonEmail.Size = new System.Drawing.Size(332, 22);
+            this.sendButtonEmail.StyleController = this.layoutControl4;
+            this.sendButtonEmail.TabIndex = 5;
+            this.sendButtonEmail.Text = "Wyślij email";
+            this.sendButtonEmail.Click += new System.EventHandler(this.sendButtonEmail_Click);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.sendButtonEmail;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 405);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(336, 26);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // genereteButtonPdf
+            // 
+            this.genereteButtonPdf.Location = new System.Drawing.Point(348, 417);
+            this.genereteButtonPdf.Name = "genereteButtonPdf";
+            this.genereteButtonPdf.Size = new System.Drawing.Size(332, 22);
+            this.genereteButtonPdf.StyleController = this.layoutControl4;
+            this.genereteButtonPdf.TabIndex = 6;
+            this.genereteButtonPdf.Text = "Generuj do pdf-a";
+            this.genereteButtonPdf.Click += new System.EventHandler(this.genereteButtonPdf_Click);
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.genereteButtonPdf;
+            this.layoutControlItem14.Location = new System.Drawing.Point(336, 405);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(336, 26);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
+            // 
+            // colId3
+            // 
+            this.colId3.FieldName = "Id";
+            this.colId3.Name = "colId3";
+            // 
+            // colDate1
+            // 
+            this.colDate1.Caption = "Data wpłynięcia";
+            this.colDate1.FieldName = "Date";
+            this.colDate1.Name = "colDate1";
+            this.colDate1.Visible = true;
+            this.colDate1.VisibleIndex = 3;
+            // 
+            // colDueDate
+            // 
+            this.colDueDate.FieldName = "DueDate";
+            this.colDueDate.Name = "colDueDate";
+            // 
+            // colContractor1
+            // 
+            this.colContractor1.FieldName = "Contractor";
+            this.colContractor1.Name = "colContractor1";
+            // 
+            // colElementList1
+            // 
+            this.colElementList1.FieldName = "ElementList";
+            this.colElementList1.Name = "colElementList1";
+            // 
+            // colCostSum1
+            // 
+            this.colCostSum1.Caption = "Całkowity koszt";
+            this.colCostSum1.FieldName = "CostSum";
+            this.colCostSum1.Name = "colCostSum1";
+            this.colCostSum1.Visible = true;
+            this.colCostSum1.VisibleIndex = 2;
+            // 
+            // colCostSumString
+            // 
+            this.colCostSumString.FieldName = "CostSumString";
+            this.colCostSumString.Name = "colCostSumString";
+            this.colCostSumString.OptionsColumn.ReadOnly = true;
+            // 
+            // colDueDateString
+            // 
+            this.colDueDateString.FieldName = "DueDateString";
+            this.colDueDateString.Name = "colDueDateString";
+            this.colDueDateString.OptionsColumn.ReadOnly = true;
+            // 
+            // colDateString
+            // 
+            this.colDateString.FieldName = "DateString";
+            this.colDateString.Name = "colDateString";
+            this.colDateString.OptionsColumn.ReadOnly = true;
+            // 
+            // colElements1
+            // 
+            this.colElements1.Caption = "Ilość elementów";
+            this.colElements1.FieldName = "Elements";
+            this.colElements1.Name = "colElements1";
+            this.colElements1.OptionsColumn.ReadOnly = true;
+            this.colElements1.Visible = true;
+            this.colElements1.VisibleIndex = 1;
+            // 
+            // colName3
+            // 
+            this.colName3.Caption = "Akronim";
+            this.colName3.FieldName = "Name";
+            this.colName3.Name = "colName3";
+            this.colName3.OptionsColumn.ReadOnly = true;
+            this.colName3.Visible = true;
+            this.colName3.VisibleIndex = 0;
+            // 
+            // colNIP2
+            // 
+            this.colNIP2.FieldName = "NIP";
+            this.colNIP2.Name = "colNIP2";
+            this.colNIP2.OptionsColumn.ReadOnly = true;
             // 
             // PatternsProject
             // 
@@ -849,8 +1000,12 @@ namespace PatternsProject
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSendInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSendInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -875,10 +1030,7 @@ namespace PatternsProject
         private DevExpress.XtraLayout.LayoutControl layoutControl3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraEditors.SimpleButton viewButtonInvoice;
         private DevExpress.XtraEditors.SimpleButton addButtonInvoice;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
@@ -926,5 +1078,25 @@ namespace PatternsProject
         private DevExpress.XtraGrid.Columns.GridColumn colElements;
         private DevExpress.XtraGrid.Columns.GridColumn colName2;
         private DevExpress.XtraGrid.Columns.GridColumn colNIP1;
+        private DevExpress.XtraEditors.SimpleButton genereteButtonPdf;
+        private DevExpress.XtraEditors.SimpleButton sendButtonEmail;
+        private DevExpress.XtraGrid.GridControl gridControlSendInvoice;
+        private System.Windows.Forms.BindingSource invoiceBindingSource1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewSendInvoice;
+        private DevExpress.XtraGrid.Columns.GridColumn colId3;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDueDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractor1;
+        private DevExpress.XtraGrid.Columns.GridColumn colElementList1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCostSum1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCostSumString;
+        private DevExpress.XtraGrid.Columns.GridColumn colDueDateString;
+        private DevExpress.XtraGrid.Columns.GridColumn colDateString;
+        private DevExpress.XtraGrid.Columns.GridColumn colElements1;
+        private DevExpress.XtraGrid.Columns.GridColumn colName3;
+        private DevExpress.XtraGrid.Columns.GridColumn colNIP2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
     }
 }

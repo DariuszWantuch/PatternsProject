@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using PatternsProject.Model;
 using PatternsProject.Repo;
+using PatternsProject.Report;
 using PatternsProject.Service;
 using PatternsProject.View.ContractorForms;
 using PatternsProject.View.InvoiceForms;
@@ -26,6 +27,9 @@ namespace PatternsProject
         private InvoiceRepository invoiceRepository = new InvoiceRepository();       
         private List<Product> productList = new List<Product>();
         private ContractorRepository contractorRepository = new ContractorRepository();
+        private InvoiceReport invoiceReport = new InvoiceReport();
+
+        private string path = @"E:\Zajecia\Wzorce projektowe\PatternsProject\PatternsProject\Wygenerowane PDF\test.pdf";
 
         public PatternsProject()
         {
@@ -38,6 +42,7 @@ namespace PatternsProject
             gridControlContractor.DataSource = contractorRepository.GetAll();
             gridControlProduct.DataSource = productRepository.GetAll();
             gridControlInvoice.DataSource = invoiceRepository.GetAll();
+            invoiceBindingSource1.DataSource = invoiceRepository.GetAll();
         }
 
         private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
@@ -131,14 +136,29 @@ namespace PatternsProject
 
         private void viewButtonInvoice_Click(object sender, EventArgs e)
         {
-            var test = (Invoice)gridViewInvoice.GetFocusedRow();
-            using (ViewInvoiceForm viewInvoiceForm = new ViewInvoiceForm(test.Id))
+            var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
+            using (ViewInvoiceForm viewInvoiceForm = new ViewInvoiceForm(invoice.Id))
             {
                 if (viewInvoiceForm.ShowDialog() == DialogResult.OK)
                 {
                     
                 }
             }
+        }
+
+        private void sendButtonEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genereteButtonPdf_Click(object sender, EventArgs e)
+        {
+            var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
+            List<Invoice> invoiceList = new List<Invoice>();
+            invoiceList.Add(invoice);
+            invoiceReport.DataSource = invoiceList;
+            invoiceReport.DataMember = "ElementList";
+            invoiceReport.ExportToPdf(path);
         }
     }
 }

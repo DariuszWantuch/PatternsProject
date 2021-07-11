@@ -11,7 +11,7 @@ namespace PatternsProject.Report
         public InvoiceReport()
         {
             InitializeComponent();
+           
         }
-
     }
 }

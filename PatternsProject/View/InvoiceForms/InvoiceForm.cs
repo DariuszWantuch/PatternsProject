@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using PatternsProject.Model;
 using PatternsProject.Repo;
+using PatternsProject.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +46,7 @@ namespace PatternsProject.View.InvoiceForms
             using (AddProductForm addProductForm = new AddProductForm())
             {
                 if (addProductForm.ShowDialog() == DialogResult.OK)
-                {
+                {                  
                     Element element = new Element();
 
                     element.Product = addProductForm.product;
