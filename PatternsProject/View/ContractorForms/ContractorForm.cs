@@ -93,6 +93,8 @@ namespace PatternsProject.View.ContractorForms
                 _selectedContractor.City = textEditContractorCity.Text.ToString();
                 _selectedContractor.PostalCode = textEditContractorPostalCode.Text.ToString();
 
+
+
                 contractorRepository.Save(_selectedContractor);
 
                 XtraMessageBox.Show("Produkt został pomyślnie zaktualizowany. ", "Aktualizacja produktu", MessageBoxButtons.OK);

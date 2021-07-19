@@ -12,12 +12,29 @@ using PatternsProject.Mapping;
 
 namespace PatternsProject.Service
 {
-    static class NHService
+    class NHService
     {
         private static string CONNECTION_STRING = @"Server=DESKTOP-9FESPE6\SQLEXPRESS;Database=PatternsProject;User Id =ADMIN; Password=Admin1234!";
         public static ISessionFactory SessionFactory { get; private set; }
 
-        public static void Init()
+        private static NHService _NHService;
+
+        private NHService()
+        {
+            Init();
+        }
+
+        public static NHService GetNHService()
+        {
+            if (_NHService == null)
+            {
+                _NHService = new NHService();
+               
+            }
+            return _NHService;
+        }
+
+        private static void Init()
         {
             try
             {               

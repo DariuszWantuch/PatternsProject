@@ -3,6 +3,9 @@ using PatternsProject.Model;
 using PatternsProject.Repo;
 using PatternsProject.Report;
 using PatternsProject.Service;
+using PatternsProject.Service.Listener;
+using PatternsProject.Service.Notify;
+using PatternsProject.Utility;
 using PatternsProject.View.ContractorForms;
 using PatternsProject.View.InvoiceForms;
 using PatternsProject.View.ProductForms;
@@ -17,8 +20,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PatternsProject
-{
-    
+{   
     public partial class PatternsProject : DevExpress.XtraEditors.XtraForm
     {
         private ProductService productService = new ProductService();
@@ -28,16 +30,14 @@ namespace PatternsProject
         private List<Product> productList = new List<Product>();
         private ContractorRepository contractorRepository = new ContractorRepository();
         private InvoiceReport invoiceReport = new InvoiceReport();
-
-        private string path = @"E:\Zajecia\Wzorce projektowe\PatternsProject\PatternsProject\Wygenerowane PDF\test.pdf";
+        public Worker worker = new Worker();
+        EmailSendable email = new EmailSendable();
 
         public PatternsProject()
         {
             InitializeComponent();
-            NHService.Init();
-            this.CenterToScreen();
-          
-            
+            NHService.GetNHService();
+            this.CenterToScreen();      
 
             gridControlContractor.DataSource = contractorRepository.GetAll();
             gridControlProduct.DataSource = productRepository.GetAll();
@@ -56,6 +56,10 @@ namespace PatternsProject
             {
                 if(addContractorForm.ShowDialog() == DialogResult.OK)
                 {
+                    var logger = new LoggingListener($"Dodano nowego kontrahenta.");
+
+                    worker.events.AddEvent(EventType.Contractors, logger);
+
                     gridControlContractor.DataSource = contractorRepository.GetAll();
                 }
             }
@@ -66,7 +70,11 @@ namespace PatternsProject
             using (ProductForm addProductForm = new ProductForm())
             {
                 if (addProductForm.ShowDialog() == DialogResult.OK)
-                {                              
+                {
+                    var logger = new LoggingListener($"Dodano nowy produkt.");
+
+                    worker.events.AddEvent(EventType.Products, logger);
+
                     gridControlProduct.DataSource = productRepository.GetAll();
                 }
             }
@@ -80,6 +88,10 @@ namespace PatternsProject
 
             if(result == true)
             {
+                var logger = new LoggingListener($"Usunięto produkt o nazwie: {selectedProduct.Name}");
+
+                worker.events.AddEvent(EventType.Products, logger);
+
                 gridControlProduct.DataSource = productRepository.GetAll();
             }
             
@@ -94,6 +106,10 @@ namespace PatternsProject
                 if (editProductForm.ShowDialog() == DialogResult.OK)
                 {
                     gridControlProduct.DataSource = productRepository.GetAll();
+
+                    var logger = new LoggingListener($"Edytowano produkt o nazwie: {selectedProduct.Name}");
+
+                    worker.events.AddEvent(EventType.Products, logger);
                 }
             }
         }
@@ -107,6 +123,10 @@ namespace PatternsProject
                 if (editContractorForm.ShowDialog() == DialogResult.OK)
                 {
                     gridControlContractor.DataSource = contractorRepository.GetAll();
+
+                    var logger = new LoggingListener($"Edytowano kontrahenta o nazwie: {selectedContractor.Name}");
+
+                    worker.events.AddEvent(EventType.Contractors, logger);
                 }
             }
         }
@@ -119,6 +139,9 @@ namespace PatternsProject
 
             if (result == true)
             {
+                var logger = new LoggingListener($"Usunięto kontrahenta o nazwie: {selectedContractor.Name}.");
+
+                worker.events.AddEvent(EventType.Contractors, logger);
                 gridControlContractor.DataSource = contractorRepository.GetAll();
             }
         }
@@ -129,6 +152,10 @@ namespace PatternsProject
             {
                 if (invoiceForm.ShowDialog() == DialogResult.OK)
                 {
+                    var logger = new LoggingListener($"Dodano nową fakturę.");
+
+                    worker.events.AddEvent(EventType.Invoices, logger);
+
                     gridControlInvoice.DataSource = invoiceRepository.GetAll();
                 }
             }
@@ -141,24 +168,75 @@ namespace PatternsProject
             {
                 if (viewInvoiceForm.ShowDialog() == DialogResult.OK)
                 {
-                    
+                    var logger = new LoggingListener($"Wyświetlono fakturę o nazwie: {invoice.Name}.");
+
+                    worker.events.AddEvent(EventType.Invoices, logger);
                 }
             }
         }
 
         private void sendButtonEmail_Click(object sender, EventArgs e)
         {
+            InvoiceSenderService invoiceSender = new InvoiceSenderService(email);
 
+            try
+            {                             
+                var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
+                var invoiceName = $"{invoice.Id}{DateTime.UtcNow.ToString("dd")}{DateTime.UtcNow.ToString("hh")}{DateTime.UtcNow.ToString("mm")}{DateTime.UtcNow.ToString("ss")}.pdf";
+                var invoicePath = PathOptions.EmailPDF + invoiceName;
+                List<Invoice> invoiceList = new List<Invoice>();
+                invoiceList.Add(invoice);
+                invoiceReport.DataSource = invoiceList;
+                invoiceReport.DataMember = "ElementList";
+                invoiceReport.ExportToPdf(invoicePath);
+
+                invoiceSender.Send(invoice.Contractor.Email, $"Faktura nr {invoice.Id}", $"Wystawiono fakturę nr {invoice.Id}", invoice.Id, invoicePath);
+
+                var logger = new LoggingListener($"Faktura nr { invoice.Id }, została wysłana pomyślnie na adres: { invoice.Contractor.Email}");
+
+                worker.events.AddEvent(EventType.SentInvoices, logger);
+
+                XtraMessageBox.Show($"Faktura nr {invoice.Id}, została wysłana pomyślnie na adres: {invoice.Contractor.Email}", "Potwierdzenie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"Wystąpił problem podczas wysyłki email: {ex}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }         
         }
 
         private void genereteButtonPdf_Click(object sender, EventArgs e)
+        {                                
+            try
+            {
+                var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
+                var invoiceName = $"{invoice.Id}{DateTime.UtcNow.ToString("dd")}{DateTime.UtcNow.ToString("hh")}{DateTime.UtcNow.ToString("mm")}{DateTime.UtcNow.ToString("ss")}.pdf";
+                var invoicePath = PathOptions.GeneratePDF + invoiceName;
+                List<Invoice> invoiceList = new List<Invoice>();
+                invoiceList.Add(invoice);
+                invoiceReport.DataSource = invoiceList;
+                invoiceReport.DataMember = "ElementList";
+                invoiceReport.ExportToPdf(invoicePath);
+
+                var logger = new LoggingListener($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a. Nazwa pliku: {invoiceName}");
+
+                worker.events.AddEvent(EventType.GeneratePDFs, logger);
+
+                XtraMessageBox.Show($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a. Nazwa pliku: {invoiceName}", "Potwierdzenie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"Wystąpił problem podczas generowania faktury do PDF-a: {ex}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void PatternsProject_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
-            List<Invoice> invoiceList = new List<Invoice>();
-            invoiceList.Add(invoice);
-            invoiceReport.DataSource = invoiceList;
-            invoiceReport.DataMember = "ElementList";
-            invoiceReport.ExportToPdf(path);
+            worker.SaveGeneratePDFs();
+            worker.SaveInvoices();
+            worker.SavePContractors();
+            worker.SaveProduct();
+            worker.SaveSentInvoices();
         }
     }
 }
