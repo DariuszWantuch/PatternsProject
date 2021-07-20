@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using PatternsProject.Model;
+using PatternsProject.Properties;
 using PatternsProject.Repo;
 using PatternsProject.Report;
 using PatternsProject.Service;
@@ -14,6 +15,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +45,9 @@ namespace PatternsProject
             gridControlProduct.DataSource = productRepository.GetAll();
             gridControlInvoice.DataSource = invoiceRepository.GetAll();
             invoiceBindingSource1.DataSource = invoiceRepository.GetAll();
+
+            addButtonContractor.Image = Resources.plus;
+           
         }
 
         private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)

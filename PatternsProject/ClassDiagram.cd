@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatternsProject.Service.Listener.Worker">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiAAAAAAAAAAAAAAAggAAAAAIAACAAAAAAAAA=</HashCode>
+      <FileName>Service\Listener\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Service.Listener.LoggingListener">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Service\Listener\LoggingListener.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="PatternsProject.Service.Listener.EventManager">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Service\Listener\EventManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Repo.ContractorRepository">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repo\ContractorRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Repo.InvoiceRepository">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repo\InvoiceRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Repo.ProductRepository">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repo\ProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Repo.Repository&lt;T&gt;">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repo\Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Service.InvoiceSenderService">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\InvoiceSenderService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Service.Notify.EmailSendable">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\Notify\EmailSendable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Service.Notify.Sendable">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\Notify\Sendable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternsProject.Service.Notify.Sender">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAEAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\Notify\Sender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PatternsProject.Service.Listener.EventListener">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\Listener\EventListener.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
