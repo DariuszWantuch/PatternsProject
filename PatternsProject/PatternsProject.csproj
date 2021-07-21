@@ -142,6 +142,11 @@
     <Compile Include="Repo\InvoiceRepository.cs" />
     <Compile Include="Repo\ProductRepository.cs" />
     <Compile Include="Repo\Repository.cs" />
+    <Compile Include="Service\ContractorDisplay\Context.cs" />
+    <Compile Include="Service\ContractorDisplay\Display.cs" />
+    <Compile Include="Service\ContractorDisplay\DisplayLongAddress.cs" />
+    <Compile Include="Service\Generator\Generator.cs" />
+    <Compile Include="Service\Generator\PdfGenerator.cs" />
     <Compile Include="Service\InvoiceSenderService.cs" />
     <Compile Include="Service\Listener\EventListener.cs" />
     <Compile Include="Service\Listener\EventManager.cs" />

@@ -2,6 +2,7 @@
 using PatternsProject.Model;
 using PatternsProject.Repo;
 using PatternsProject.Report;
+using PatternsProject.Service.ContractorDisplay;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,15 @@ namespace PatternsProject.View.InvoiceForms
         private Contractor contractor = new Contractor();
         private Invoice invoice = new Invoice();
         private InvoiceRepository invoiceRepository = new InvoiceRepository();
+        Context context = new Context();
+
         public InvoiceForm()
         {
             InitializeComponent();
             this.CenterToParent();
 
             elementBindingSource.DataSource = elements;
+            context.SetDisplay(new DisplayLongAddress());
         }
 
         private void addButtonContractor_Click(object sender, EventArgs e)
@@ -36,7 +40,7 @@ namespace PatternsProject.View.InvoiceForms
                 {
                     contractor = addContractorForm.contractor;
 
-                    textEditAddContractor.Text = contractor.Name + ", " + contractor.PostalCode + " " + contractor.City + ", " + contractor.Street +  ", "+  contractor.Phone;
+                    textEditAddContractor.Text = context.Display(contractor);
                 }
             }
         }

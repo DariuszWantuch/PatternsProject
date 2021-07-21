@@ -4,6 +4,7 @@ using PatternsProject.Properties;
 using PatternsProject.Repo;
 using PatternsProject.Report;
 using PatternsProject.Service;
+using PatternsProject.Service.Generator;
 using PatternsProject.Service.Listener;
 using PatternsProject.Service.Notify;
 using PatternsProject.Utility;
@@ -30,8 +31,7 @@ namespace PatternsProject
         private ProductRepository productRepository = new ProductRepository();
         private InvoiceRepository invoiceRepository = new InvoiceRepository();       
         private List<Product> productList = new List<Product>();
-        private ContractorRepository contractorRepository = new ContractorRepository();
-        private InvoiceReport invoiceReport = new InvoiceReport();
+        private ContractorRepository contractorRepository = new ContractorRepository();       
         public Worker worker = new Worker();
         EmailSendable email = new EmailSendable();
 
@@ -44,10 +44,7 @@ namespace PatternsProject
             gridControlContractor.DataSource = contractorRepository.GetAll();
             gridControlProduct.DataSource = productRepository.GetAll();
             gridControlInvoice.DataSource = invoiceRepository.GetAll();
-            invoiceBindingSource1.DataSource = invoiceRepository.GetAll();
-
-            addButtonContractor.Image = Resources.plus;
-           
+            invoiceBindingSource1.DataSource = invoiceRepository.GetAll();                 
         }
 
         private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
@@ -187,13 +184,8 @@ namespace PatternsProject
             try
             {                             
                 var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
-                var invoiceName = $"{invoice.Id}{DateTime.UtcNow.ToString("dd")}{DateTime.UtcNow.ToString("hh")}{DateTime.UtcNow.ToString("mm")}{DateTime.UtcNow.ToString("ss")}.pdf";
-                var invoicePath = PathOptions.EmailPDF + invoiceName;
-                List<Invoice> invoiceList = new List<Invoice>();
-                invoiceList.Add(invoice);
-                invoiceReport.DataSource = invoiceList;
-                invoiceReport.DataMember = "ElementList";
-                invoiceReport.ExportToPdf(invoicePath);
+                
+                var invoicePath = GenerateDocument(new PdfGenerator(), invoice);
 
                 invoiceSender.Send(invoice.Contractor.Email, $"Faktura nr {invoice.Id}", $"Wystawiono fakturę nr {invoice.Id}", invoice.Id, invoicePath);
 
@@ -214,25 +206,27 @@ namespace PatternsProject
             try
             {
                 var invoice = (Invoice)gridViewInvoice.GetFocusedRow();
-                var invoiceName = $"{invoice.Id}{DateTime.UtcNow.ToString("dd")}{DateTime.UtcNow.ToString("hh")}{DateTime.UtcNow.ToString("mm")}{DateTime.UtcNow.ToString("ss")}.pdf";
-                var invoicePath = PathOptions.GeneratePDF + invoiceName;
-                List<Invoice> invoiceList = new List<Invoice>();
-                invoiceList.Add(invoice);
-                invoiceReport.DataSource = invoiceList;
-                invoiceReport.DataMember = "ElementList";
-                invoiceReport.ExportToPdf(invoicePath);
 
-                var logger = new LoggingListener($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a. Nazwa pliku: {invoiceName}");
+                GenerateDocument(new PdfGenerator(), invoice);
+
+                var logger = new LoggingListener($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a.");
 
                 worker.events.AddEvent(EventType.GeneratePDFs, logger);
 
-                XtraMessageBox.Show($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a. Nazwa pliku: {invoiceName}", "Potwierdzenie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show($"Faktura nr {invoice.Id}, została pomyślnie wygenrowana do PDF-a.", "Potwierdzenie", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show($"Wystąpił problem podczas generowania faktury do PDF-a: {ex}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        public static string GenerateDocument(Generator generator, Invoice invoice)
+        {
+            generator.Template(invoice);
+
+            return generator.path;
         }
 
         private void PatternsProject_FormClosing(object sender, FormClosingEventArgs e)
